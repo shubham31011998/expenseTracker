@@ -10,6 +10,18 @@ html {
 
 body {
   margin: 0;
-  background-color: #3f3f3f;
+  background-color: #222222;
 }
-
+.text_danger{
+  color: red!important;
+}
+.Text_Done{
+  font-weight: 800;
+  color: green;
+  font-size: 1rem;
+}
+.Text_Pending{
+  font-weight: 800;
+  color: red;
+  font-size: 1rem;
+}
