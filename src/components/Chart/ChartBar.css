@@ -21,7 +21,7 @@
 }
 
 .chart-bar__fill {
-  background-color: #297ce9;
+  background-color: #072a58;
   width: 100%;
   transition: all 0.3s ease-out;
 }
@@ -33,4 +33,18 @@
 }
 .margin_amount{
   font-size: 12px;
+}
+.available_margin{
+  color: green!important;
+}
+.available_margin::before{
+  /* color: green!important; */
+  content: ' \002B';
+}
+.notAvailable_margin{
+  color: red!important;
+}
+.notAvailable_margin::before{
+  /* color: green!important; */
+  /* content: ' \002D'; */
 }

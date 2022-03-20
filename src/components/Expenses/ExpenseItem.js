@@ -13,8 +13,8 @@ const ExpenseItem = (props) => {
         <ExpenseDate date={props.date} />
         <div className='expense-item__description'>
           <h2>{props.title}</h2>
-          <button onClick={()=>deleteExpenseDataHandler(props.id)}>Delete</button>
           <div className='expense-item__price'>{props.amount} &#x20B9;</div>
+          <button onClick={()=>deleteExpenseDataHandler(props.id)}>Delete</button>
         </div>
       </Card>
     </li>

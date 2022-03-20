@@ -13,7 +13,7 @@ const ExpenseForm = (props) => {
   };
 
   const amountChangeHandler = (event) => {
-    setEnteredAmount(event.target.value);
+    setEnteredAmount(Math.floor(event.target.value));
 
   };
 
@@ -27,7 +27,7 @@ const ExpenseForm = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
     const titleLength = enteredTitle.trim().length;
-    const amountLength = enteredAmount.trim().length;
+    const amountLength = enteredAmount.length;
     const datelength = enteredDate.trim().length;
     console.log('enteredDate', datelength)
 
@@ -91,7 +91,7 @@ const ExpenseForm = (props) => {
       <div className='validations'>
         <ul>
           <li><span className={enteredTitle.trim().length>0 ? "Text_Done" : "Text_Pending"}>{enteredTitle.trim().length>0 ? "Done" : "Pending"}</span> - Enter Expense Title</li>
-          <li><span className={enteredAmount.trim().length>0 ? "Text_Done" : "Text_Pending"}>{enteredAmount.trim().length>0 ? "Done" : "Pending"}</span> - Enter Expense Amount</li>
+          <li><span className={enteredAmount.value>0 ? "Text_Done" : "Text_Pending"}>{enteredAmount.value>0 ? "Done" : "Pending"}</span> - Enter Expense Amount</li>
           <li><span className={enteredDate.trim().length>0  ? "Text_Done" : "Text_Pending"}>{enteredDate.trim().length>0  ? "Done" : "Pending"}</span> - Select Expense Date</li>
         </ul>
       </div>

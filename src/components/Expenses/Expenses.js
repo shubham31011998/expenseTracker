@@ -39,11 +39,12 @@ const Expenses = (props) => {
           </div>
           <div className='cardMain'>
             Spent<br />
-            <h2>2000</h2>
+            <h2>{props.spent}</h2>
           </div>
           <div className='cardMain'>
             Remaining<br />
-            <h2>2000</h2>
+            <h2>{props.extendedAmount > 0 ? 0 : props.remaining}</h2>
+            {props.extendedAmount > 0 && <small>Extended: {props.extendedAmount}</small>}
           </div>
         </div>
         <ExpensesChart expenses={filteredExpenses} />
